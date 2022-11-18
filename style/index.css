@@ -145,29 +145,23 @@ body {
 }
 
 /* Button */
-.c-btn,
-.c-btn-link {
+.c-btn {
   background-color: var(--bright-blue);
   border-radius: 0.75rem;
+  box-shadow: 0 1.25rem 0.9375rem var(--pale-blue);
   color: var(--white);
+  cursor: pointer;
   display: block;
   font-size: 0.9375rem;
   font-weight: 700;
-  width: 100%;
-}
-
-.c-btn {
-  box-shadow: 0 1.25rem 0.9375rem var(--pale-blue);
+  height: 3.125rem;
   margin-block: 1.5rem 1.25rem;
   transition: opacity 0.3s;
+  width: 100%;
 }
 
 .c-btn:hover {
   opacity: 0.8;
-}
-
-.c-btn-link {
-  padding: calc((3.125rem - 0.9375rem * 1.5) / 2) 0;
 }
 
 .c-btn-cancel {
