@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a solution to the Order summary card challenge on Frontend Mentor"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Order summary card</title>
 
-  Order Summary
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
+  <body>
+    <main class="component-container">
+      <img
+        src="./images/illustration-hero.svg"
+        alt="Illustration of a happy person listening music"
+        class="c-hero-image"
+      />
+      <div class="c-content">
+        <h1 class="c-title">Order Summary</h1>
+        <p class="c-description">
+          You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere
+          you like!
+        </p>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+        <section class="c-info">
+          <img src="./images/icon-music.svg" alt="Music note icon" class="i-icon" />
+          <div class="i-current-plan">
+            <h2 class="i-current-plan-name">Annual Plan</h2>
+            <span class="i-current-plan-price">$59.99/year</span>
+          </div>
+          <a href="#" class="i-link-change">Change</a>
+        </section>
 
-  Annual Plan
-  $59.99/year
+        <button class="c-btn"><a href="#" class="c-btn-link">Proceed to Payment</a></button>
+        <a href="#" class="c-btn-cancel">Cancel Order</a>
+      </div>
+    </main>
 
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="c-footer">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/mateusbelicio">Mateus Belicio</a>.
+    </footer>
+  </body>
 </html>

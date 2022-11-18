@@ -1,0 +1,247 @@
+/*******************************************************/
+/* IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/*******************************************************/
+/* VARIABLES */
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/*******************************************************/
+/* GENERAL CONFIGURATIONS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+body {
+  background-color: var(--pale-blue);
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: grid;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  min-height: 100vh;
+  place-content: center;
+  width: 100%;
+}
+
+/*******************************************************/
+/* MAIN */
+
+.component-container {
+  background-color: var(--white);
+  border-radius: 1.25rem;
+  box-shadow: 0 1.25rem 1.25rem rgba(31, 47, 86, 0.1);
+  max-width: 20.44rem;
+  overflow: hidden;
+  transition: all 0.6s;
+}
+
+.c-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: -0.40625rem;
+  padding: 2.125rem 1.5rem;
+  text-align: center;
+}
+
+.c-title {
+  color: var(--dark-blue);
+  font-size: 1.375rem;
+  font-weight: 900;
+}
+
+.c-description {
+  color: var(--desaturated-blue);
+  letter-spacing: -2.4%;
+  padding-inline: 0.3125rem;
+  margin-top: 1.125rem;
+}
+
+/* Info section */
+.c-info {
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  border-radius: 0.75rem;
+  display: flex;
+  gap: 1.125rem;
+  margin-top: 1.75rem;
+  padding: 0.9375rem;
+  width: 100%;
+}
+
+.i-current-plan {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+}
+
+.i-current-plan-name {
+  color: var(--dark-blue);
+  font-size: 0.875rem;
+  font-weight: 900;
+}
+
+.i-current-plan-price {
+  color: var(--desaturated-blue);
+}
+
+.i-link-change {
+  color: var(--bright-blue);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin-left: auto;
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+
+.i-link-change:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+/* Button */
+.c-btn,
+.c-btn-link {
+  background-color: var(--bright-blue);
+  border-radius: 0.75rem;
+  color: var(--white);
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+.c-btn {
+  box-shadow: 0 1.25rem 0.9375rem var(--pale-blue);
+  margin-block: 1.5rem 1.25rem;
+  transition: opacity 0.3s;
+}
+
+.c-btn:hover {
+  opacity: 0.8;
+}
+
+.c-btn-link {
+  padding: calc((3.125rem - 0.9375rem * 1.5) / 2) 0;
+}
+
+.c-btn-cancel {
+  color: var(--dark-blue);
+  font-size: 0.9375rem;
+  font-weight: 900;
+  opacity: 0.65;
+  transition: opacity 0.2s;
+}
+
+.c-btn-cancel:hover {
+  opacity: 1;
+}
+
+/*******************************************************/
+/* FOOTER */
+
+.c-footer {
+  bottom: 0.3125rem;
+  color: var(--desaturated-blue);
+  font-size: 0.625rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.c-footer a:hover {
+  color: var(--bright-blue);
+  text-decoration: underline;
+}
+
+/*******************************************************/
+/* MEDIA */
+
+@media screen and (min-width: 62.5em) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+  }
+
+  .component-container {
+    max-width: 28.125rem;
+  }
+
+  .c-hero-image {
+    height: auto;
+  }
+
+  .c-content {
+    padding: 3.25rem 3rem;
+  }
+
+  .c-title {
+    font-size: 1.75rem;
+  }
+
+  .c-info {
+    padding: 1.5rem;
+  }
+
+  .c-btn {
+    margin-block: 2rem 1.5rem;
+  }
+
+  .c-info {
+    margin-top: 1.375rem;
+  }
+
+  .i-current-plan,
+  .i-current-plan-name {
+    font-size: 1rem;
+  }
+
+  .i-link-change {
+    font-size: 0.875rem;
+  }
+}
